@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+    <h1>l | {{ team.name }}</h1>
+    <div>Add player:</div>
+  <form action="{{ url_for('add_player') }}" method=post class=add-team>
+    <dl>
+      <dt>Name:
+      <dd><input type=text size=30 name=name>
+      <dt>Position:
+      <dd><input type=text size=30 name=pos>
+
+      <dd><input type=submit value='Add player'>
+    </dl>
+  </form>
+  <ul class=teams>
+  {% for player in players %}
+    <li><h2>{{ player.name }} Pos: {{ player.position }}</h2>
+  {% endfor %}
+  </ul>
+{% endblock %}
