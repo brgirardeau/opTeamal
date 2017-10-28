@@ -38,8 +38,8 @@ create table players (
 	id integer primary key autoincrememnt,
 	name text not null,
 	position text not null,
-	team text not null,
 	captain integer not null,
+	team text not null,
 		foreign key (teamId) references team(id),
 	lineupId integer not null,
 		foreign key (lineupId) references lineup(id)
