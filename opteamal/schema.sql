@@ -5,7 +5,8 @@ create table players (
 	name text not null,
 	position text not null,
 	team text not null,
-	captain integer not null
+	captain integer not null,
+	lineupId integer not null
 );
 
 
@@ -13,5 +14,19 @@ drop table if exists team;
 create table team (
 	id integer primary key autoincrememnt,
 	name text not null,
+	starterLineupId integer not null, 
+	analyzerId integer not null
+);
 
-)
+drop table if exists analyzer;
+create table analyzer (
+	id integer primary key autoincrement,
+	team text not null,
+
+);
+
+drop table if exists lineup;
+create table lineup (
+	id integer primary key autoincrement,
+
+);
