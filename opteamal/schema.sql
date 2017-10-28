@@ -1,7 +1,7 @@
 
 drop table if exists team;
 create table team (
-	id integer primary key autoincrememnt,
+	id integer primary key autoincrement,
 	name text not null,
 	starterLineupId integer not null, 
 	analyzerId integer not null
@@ -24,7 +24,7 @@ create table lineup (
 
 drop table if exists statistics;
 create table statistics (
-	id integer primary key autoincrememnt,
+	id integer primary key autoincrement,
 	teamId integer not null,
 		foreign key (teamId) references team(id),
 	name text not null,
