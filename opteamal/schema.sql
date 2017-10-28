@@ -39,8 +39,7 @@ create table players (
 	name text not null,
 	position text not null,
 	captain integer not null,
+	lineupId integer not null references lineup(id)
 	team text not null,
-		foreign key (teamId) references team(id),
-	lineupId integer not null,
-		foreign key (lineupId) references lineup(id)
+		foreign key (teamId) references team(id)
 );
